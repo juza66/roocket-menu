@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/styles.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body x-data="{ dropDown : false }">
+
+    <div class="absolute top-0 left-0 h-screen w-full bg-gray-900 opacity-30 z-10 " x-show="dropDown"></div>
+    
+    <div class="container mx-auto relative" >
+
+
+        <div class="w-full bg-white rounded-lg shadow-xl p-10 mt-10 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">LOGO</h1>
+            <div class="border-2 p-1 rounded-full z-20" @click="dropDown = !dropDown" :class="dropDown ? 'border-green-500' : ''">
+                <img src="../dist/images/avatar.png" class="w-16 h-16 overflow-hidden rounded-full cursor-pointer" alt="avatar" >
+            </div>
+        </div>
+
+        <div class="p-3 bg-white shadow-xl rounded-lg w-80 absolute left-3 top-40 z-20" x-show="dropDown" @click.outside="dropDown = false">
+            <div class="p-3">
+                <div class="flex items-center mb-3">
+                    <img src="../dist/images/avatar.png" class="w-16 h-16 overflow-hidden rounded-full cursor-pointer" alt="">
+                    <div class="mr-2">
+                        <h1 class="text-2xl font-bold">سیدعلی موسوی</h1>
+                        <p>برنامه نویس</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <ul class="space-y-3 mt-3">
+                        <li class="flex items-center hover:bg-slate-200 rounded-lg p-2 cursor-pointer">
+                            <svg class="dark:text-gray-920 text-gray-550 ml-4" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8862 13.2399C13.9552 14.801 12.6953 16.1211 11.0724 16.1874C10.9529 16.1925 5.12549 16.1807 5.12549 16.1807C3.5105 16.3033 2.09705 15.1428 1.96966 13.5876C1.96007 13.4717 1.96268 7.21902 1.96268 7.21902C1.89114 5.65627 3.14928 4.33284 4.773 4.26398C4.89428 4.2581 10.7138 4.26902 10.7138 4.26902C12.3367 4.1481 13.7545 5.31701 13.8801 6.87976C13.8889 6.99229 13.8862 13.2399 13.8862 13.2399Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M13.8889 8.50365L16.6949 6.20729C17.3902 5.6381 18.4331 6.13401 18.4323 7.03125L18.422 13.2932C18.4212 14.1905 17.3774 14.6821 16.6838 14.1129L13.8889 11.8166" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span>دوره های آموزشی</span>
+                        </li>
+                        <li class="flex items-center hover:bg-slate-200 rounded-lg p-2 cursor-pointer">
+                            <svg class="dark:text-gray-920 text-gray-550 ml-4" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <path d="M18.4382 12.2664H14.9887C13.7221 12.2656 12.6955 11.2398 12.6947 9.9732C12.6947 8.70663 13.7221 7.68079 14.9887 7.68001H18.4382" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M15.3789 9.92071H15.1133" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.60165 2.55625H13.9666C16.436 2.55625 18.438 4.55823 18.438 7.0277V13.1431C18.438 15.6126 16.436 17.6146 13.9666 17.6146H6.60165C4.13218 17.6146 2.1302 15.6126 2.1302 13.1431V7.0277C2.1302 4.55823 4.13218 2.55625 6.60165 2.55625Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M5.99492 6.42315H10.5953" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span>مالی و اشتراک</span>
+                        </li>
+                        <li class="flex items-center hover:bg-slate-200 rounded-lg p-2 cursor-pointer">
+                            <svg class="dark:text-gray-920 text-gray-550 ml-4" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                <rect x="0.75" y="0.75" width="17.5" height="17.5" rx="5.25" stroke="currentColor" stroke-width="1.5"></rect>
+                                <path d="M9.50018 4.74982C8.75758 4.74982 8.14246 5.03617 7.72098 5.51032C7.31246 5.96991 7.12518 6.5603 7.12518 7.12482C7.12518 8.11758 7.70632 8.80324 8.08418 9.24907L8.1044 9.27293C8.55085 9.80006 8.70852 10.0222 8.70852 10.2915C8.70852 10.7287 9.06296 11.0832 9.50018 11.0832C9.93741 11.0832 10.2918 10.7287 10.2918 10.2915C10.2918 9.39408 9.73447 8.7428 9.38037 8.32905C9.35682 8.30153 9.33416 8.27506 9.31263 8.24964C8.89792 7.75998 8.70852 7.48219 8.70852 7.12482C8.70852 6.89767 8.78513 6.6964 8.90438 6.56223C9.01069 6.44264 9.18723 6.33315 9.50018 6.33315C9.81314 6.33315 9.98968 6.44264 10.096 6.56223C10.2152 6.6964 10.2918 6.89767 10.2918 7.12482C10.2918 7.56204 10.6463 7.91649 11.0835 7.91649C11.5207 7.91649 11.8752 7.56204 11.8752 7.12482C11.8752 6.5603 11.6879 5.96991 11.2794 5.51032C10.8579 5.03617 10.2428 4.74982 9.50018 4.74982Z" fill="currentColor"></path>
+                                <path d="M9.50018 11.8748C9.06296 11.8748 8.70852 12.2293 8.70852 12.6665C8.70852 13.1037 9.06296 13.4582 9.50018 13.4582C9.93741 13.4582 10.2918 13.1037 10.2918 12.6665C10.2918 12.2293 9.93741 11.8748 9.50018 11.8748Z" fill="currentColor"></path>
+                            </svg>
+                            <span>پرسش و پاسخ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+</body>
+</html>
